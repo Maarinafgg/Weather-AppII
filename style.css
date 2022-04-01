@@ -2,6 +2,18 @@ h1 {
   color: #fc709b;
 }
 
+.container
+{
+  margin: 100px auto 12px;
+  display: block;
+  padding: 15px 50px;
+  max-width: 420px;
+  background-image: url("img/cute-cartoon-snail-isolated-white-background-vector-74738243.jpg");
+background-size: 10%;
+background-repeat: no-repeat;
+background-position: bottom;
+}
+
 #currentIcon{
   width: 120px;
   display: block;
