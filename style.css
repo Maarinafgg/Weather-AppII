@@ -10,15 +10,18 @@ h1 {
   display: block;
  }
  
- h2{
-  text-align: center;
-  margin: 0 auto;
-  display: block
- }
+
+
 
  li{
    list-style: none;
  }
+
+small {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
 .container
 {
 margin: 100px auto 12px;
@@ -32,7 +35,22 @@ background-position: bottom;
 border: 1px solid #a2c11c;
 border-radius: 30px;
 }
+.maintemperature {
+  font-size: 50px;
+  text-align: center;
+  margin: 0 auto;
 
+}
+.wrap-temp{
+  text-align: center;
+}
+.units {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: -22px;
+}
 #currentIcon{
   display: block;
   margin-left: auto;
