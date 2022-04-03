@@ -1,5 +1,14 @@
 function displayTemperature (response){
-console.log(response.data.main.temp)}
+console.log(response.data);
+let temperature = document.querySelector("#temperature");
+let city = document.querySelector("#city");
+let description = document.querySelector("#weatherDiscription");
+let feelslike = document.querySelector("#feelsLike")
+temperature.innerHTML = Math.round (response.data.main.temp);
+city.innerHTML = response.data.name;
+description.innerHTML = response.data.weather[0].main;
+feelslike.innerHTML = Math.round (response.data.main.feels_like);
+}
 
 
 
