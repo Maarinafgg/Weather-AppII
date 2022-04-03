@@ -1,2 +1,10 @@
-let apiKey = "8ab3a1927d659ce917e21fbb55f52b7c";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Pyrmont&appid=${apiKey}`;
+function displayTemperature (response){
+console.log(response.data.main.temp)}
+
+
+
+let apiKey = "9078bdda44af2b0743ddeae89e1d419b";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Pyrmont&appid=${apiKey}&units=metric`;
+
+
+axios.get (apiUrl).then(displayTemperature);
