@@ -8,6 +8,16 @@ let weekDays = ["Sunday",
   "Thursday",
   "Friday",
   "Saturday"];
+  let day = weekDays[now.getDay()];
+  let hours = now.getHours();
+  if (hours < 10) {
+  hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+  minutes = `0${minutes}`;
+  }
+  date.innerHTML = `${day} ${hours}:${minutes}`;
 
 
 
