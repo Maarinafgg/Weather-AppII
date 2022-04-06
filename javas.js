@@ -1,3 +1,16 @@
+let now = new Date();
+let date = document.querySelector("#dateTime");
+
+let weekDays = ["Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"];
+
+
+
 function displayTemperature (response){
 console.log(response.data);
 let temperature = document.querySelector("#temperature");
@@ -6,7 +19,6 @@ let description = document.querySelector("#weatherDiscription");
 let feelslike = document.querySelector("#feelsLike");
 let humidity = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
-
 temperature.innerHTML = Math.round (response.data.main.temp);
 city.innerHTML = response.data.name;
 description.innerHTML = response.data.weather[0].main;
