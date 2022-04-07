@@ -51,7 +51,13 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
 axios.get (apiUrl).then(displayTemperature);
 }
 
-
+function getCurrentLocation(event){
+event.preventDefault();
+navigator.geolocation.getCurrentPosition (searchLocation);}
 
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", search);
+
+let currentLocation = document.querySelector("#currentlocation");
+currentLocation.addEventListener("click",getCurrentLocation);
+searchLocation("Sydney");
