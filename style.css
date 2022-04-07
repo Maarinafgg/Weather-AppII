@@ -26,7 +26,7 @@ display: block;
 padding: 15px 50px;
 max-width: 420px;
 background-image: url("img/cute-cartoon-snail-isolated-white-background-vector-74738243.jpg");
-background-size: 10%;
+background-size: 15%;
 background-repeat: no-repeat;
 background-position: bottom;
 border: 2px solid #a2c11c;
@@ -51,6 +51,7 @@ border-radius: 30px;
 .location:hover {
   cursor: pointer;
 }
+
 
 #currentIcon{
   display: block;
@@ -87,9 +88,15 @@ border-radius: 30px;
     bottom: 2px;
   }
   
+  
   ::placeholder {
     color: black;
     font-size: 1 em;
     text-align: center;}
+
+    #celsius-temp, #fahrenheit-temp{
+      text-decoration: none;
+      display: contents;
+    }
 
   
