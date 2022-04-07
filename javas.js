@@ -37,9 +37,21 @@ wind.innerHTML = Math.round (response.data.wind.speed);
 iconElem.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 }
 
+
+
+function search (event){
+event.preventDefault();
+let city = document.querySelector("#search-input").value;
+searchLocation(city);
+}
+
+function searchLocation(city) {
 let apiKey = "9078bdda44af2b0743ddeae89e1d419b";
-let city = "Pyrmont";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-
 axios.get (apiUrl).then(displayTemperature);
+}
+
+
+
+let form = document.querySelector("#form-search");
+form.addEventListener("submit", search);
