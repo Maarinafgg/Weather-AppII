@@ -55,9 +55,28 @@ function getCurrentLocation(event){
 event.preventDefault();
 navigator.geolocation.getCurrentPosition (searchLocation);}
 
+function convertFahrenheit(event){
+  event.preventDefault();
+ let temperatureElement = document.querySelector ("#temperature");
+temperatureElement.innerHTML = ();
+}
+
+function convertCelsius(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector ("#temperature");
+temperatureElement.innerHTML = 19;
+
+}
+
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", search);
 
 let currentLocation = document.querySelector("#currentlocation");
 currentLocation.addEventListener("click",getCurrentLocation);
 searchLocation("Sydney");
+
+let fahrenheitTemp = document.querySelector ("#fahrenheit-temp");
+fahrenheitTemp.addEventListener("click", convertFahrenheit);
+
+let celsiusTemp = document.querySelector ("#celsius-temp");
+celsiusTemp.addEventListener("click", convertCelsius);
