@@ -1,5 +1,5 @@
 h1 {
-  color: #fc709b;
+  color: #a14d1f;
   text-align: center;
   margin: 0 auto;
   display: block;
@@ -29,7 +29,7 @@ background-image: url("img/cute-cartoon-snail-isolated-white-background-vector-7
 background-size: 10%;
 background-repeat: no-repeat;
 background-position: bottom;
-border: 1px solid #a2c11c;
+border: 2px solid #a2c11c;
 border-radius: 30px;
 }
 .maintemperature {
@@ -48,6 +48,10 @@ border-radius: 30px;
   position: relative;
   top: -22px;
 }
+.location:hover {
+  cursor: pointer;
+}
+
 #currentIcon{
   display: block;
   margin-left: auto;
@@ -67,5 +71,25 @@ border-radius: 30px;
   margin: 0 auto;
   display: block;
   font-size: 12px;
-  
+   
 }
+
+#search-input {
+  border-radius: 30px;
+  margin: 10px 0px 10px 25px;
+  border: solid;
+  background-color: white;
+  padding: 0px 32px;}
+
+  #currentlocation {
+    max-width: 35px;
+    position: relative;
+    bottom: 2px;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-size: 1 em;
+    text-align: center;}
+
+  
