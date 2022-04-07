@@ -26,16 +26,19 @@ let description = document.querySelector("#weatherDiscription");
 let feelslike = document.querySelector("#feelsLike");
 let humidity = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
+let iconElem = document.querySelector("#currentIcon");
+
 temperature.innerHTML = Math.round (response.data.main.temp);
 cityElem.innerHTML = response.data.name;
 description.innerHTML = response.data.weather[0].main;
 feelslike.innerHTML = Math.round (response.data.main.feels_like);
 humidity.innerHTML = response.data.main.humidity;
 wind.innerHTML = Math.round (response.data.wind.speed);
+iconElem.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 }
 
 let apiKey = "9078bdda44af2b0743ddeae89e1d419b";
-let city = "Sydney";
+let city = "Pyrmont";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 
