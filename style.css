@@ -52,6 +52,10 @@ border-radius: 30px;
   cursor: pointer;
 }
 
+.wrap-temp .active{
+  color: black;
+}
+
 
 #currentIcon{
   display: block;
@@ -97,6 +101,6 @@ border-radius: 30px;
     #celsius-temp, #fahrenheit-temp{
       text-decoration: none;
       display: contents;
+      
     }
 
-  

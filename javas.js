@@ -28,6 +28,8 @@ let humidity = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
 let iconElem = document.querySelector("#currentIcon");
 
+celsiusTemp = Math.round (response.data.main.temp);
+
 temperature.innerHTML = Math.round (response.data.main.temp);
 cityElem.innerHTML = response.data.name;
 description.innerHTML = response.data.weather[0].main;
@@ -58,15 +60,24 @@ navigator.geolocation.getCurrentPosition (searchLocation);}
 function convertFahrenheit(event){
   event.preventDefault();
  let temperatureElement = document.querySelector ("#temperature");
-temperatureElement.innerHTML = ();
+ celsiusLink.classList.remove("active");
+ fahrenheitLink.classList.add("active");
+let fahrenheitElement = (celsiusTemp * 9)/5+32;
+temperatureElement.innerHTML = Math.round(fahrenheitElement);
+
+ //temperatureElement.innerHTML = ();
 }
 
 function convertCelsius(event){
-  event.preventDefault();
-  let temperatureElement = document.querySelector ("#temperature");
-temperatureElement.innerHTML = 19;
+event.preventDefault();
+let temperatureElement = document.querySelector ("#temperature");
+celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
+temperatureElement.innerHTML = celsiusTemp;
 
 }
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", search);
@@ -75,8 +86,9 @@ let currentLocation = document.querySelector("#currentlocation");
 currentLocation.addEventListener("click",getCurrentLocation);
 searchLocation("Sydney");
 
-let fahrenheitTemp = document.querySelector ("#fahrenheit-temp");
-fahrenheitTemp.addEventListener("click", convertFahrenheit);
+let fahrenheitLink = document.querySelector ("#fahrenheit-temp");
+fahrenheitLink.addEventListener("click", convertFahrenheit);
 
-let celsiusTemp = document.querySelector ("#celsius-temp");
-celsiusTemp.addEventListener("click", convertCelsius);
+
+let celsiusLink = document.querySelector ("#celsius-temp");
+celsiusLink.addEventListener("click", convertCelsius);
