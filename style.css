@@ -12,6 +12,7 @@ h1 {
  
  li{
    list-style: none;
+  
  }
  ul{
    padding-left: 0px;
@@ -26,7 +27,7 @@ small {
 {
 margin: 100px auto 12px;
 display: block;
-padding: 15px 50px;
+padding: 38px 50px;
 max-width: 420px;
 background-image: url("img/cute-cartoon-snail-isolated-white-background-vector-74738243.jpg");
 background-size: 15%;
@@ -63,6 +64,7 @@ border-radius: 30px;
   color: black;
   text-align: center;
   font-size: 10px;
+  margin-bottom: 20px;
 }
 
 
@@ -117,9 +119,9 @@ border-radius: 30px;
       display: contents;
     }
 .weekday {
-  border: 1px solid #cdeffc;
-  background: #cdeffc;
-  color: blue;
+  border: 1px solid #a2c11c;
+  background: #a2c11c;
+  color: white;
   font-style: italic;
   text-align: center;
   margin: auto;
@@ -128,3 +130,4 @@ border-radius: 30px;
 .wheatericons {
   max-width: 110%;
 }
+
