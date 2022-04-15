@@ -1,5 +1,5 @@
 h1 {
-  color: #a54f16;
+  color: sandybrown;
   text-align: center;
   margin: 0 auto;
   display: block;
@@ -30,10 +30,11 @@ display: block;
 padding: 38px 50px;
 max-width: 420px;
 background-image: url("img/cute-cartoon-snail-isolated-white-background-vector-74738243.jpg");
+
 background-size: 15%;
 background-repeat: no-repeat;
 background-position: bottom;
-border: 2px solid #a2c11c;
+border: 2px solid forestgreen;
 border-radius: 30px;
 }
 .maintemperature {
@@ -120,15 +121,19 @@ border-radius: 30px;
     }
 
   #styleFeelslike{
-padding-left: 15px;
+padding-left: 24px;
 
     }
-.weather-forecast-date {
-  border: 1px solid #a2c11c;
-  background: #a2c11c;
-  color: white;
-  font-style: italic;
 
+    #styleWind{
+      padding-left: 50px;
+    }
+.weather-forecast-date {
+ 
+  color: #a2c11c;
+  font-size: 16px;
+  font-style: normal;
+  
   text-align: center;
   margin: auto;
 }
