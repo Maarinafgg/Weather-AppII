@@ -19,23 +19,41 @@ let weekDays = ["Sunday",
   }
   date.innerHTML = `${day} ${hours}:${minutes}`;
 
+
+
+  function formatDay(timestamp) {
+    let date = new Date (timestamp *1000);
+    let day = date.getDay();
+    let days = ["Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"];
+    return days[day];
+
+  }
+
   function displayForecast(response){
-      console.log (response.data.daily);
+      let forecast = response.data.daily;
       let forecastElement = document.querySelector("#forecast");
 
-let forecastHTML = `<div class="row">`;
-let days = ["Fri", "Sat", "Sun","Mon","Tue"];
-days.forEach (function(day){forecastHTML = forecastHTML + `
-            <div class="col-2">
-              <div class="weather-forecast-date">${day}</div> <img
-            class="wheatericons"
-            src="img/1530369_cloudy_weather_clouds_cloud.png"
-            alt=""
-          /> <div class="weather-forecast-temperatures"><span class="maxTemperature">18°</span>/<span class="minTemperature"> 12°</span>
-          </div>
-        
-            </div>`;
+//let days = ["Fri", "Sat", "Sun","Mon","Tue"];
 
+
+let forecastHTML = `<div class="row">`;
+forecast.forEach (function(forecastDay){forecastHTML = forecastHTML +
+   `
+    <div class="col-2">
+    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div> 
+    <img class="wheatericons"
+    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt=""/> 
+    <div class="weather-forecast-temperatures">
+    <span class="maxTemperature">${forecastDay.temp.max}°</span>
+    /<span class="minTemperature">${forecastDay.temp.min}°</span>
+    </div>  
+    </div>`;
     }) 
 forecastHTML = forecastHTML +`</div>`;
         forecastElement.innerHTML = forecastHTML;
