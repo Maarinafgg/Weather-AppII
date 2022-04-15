@@ -29,12 +29,12 @@ margin: 100px auto 12px;
 display: block;
 padding: 38px 50px;
 max-width: 420px;
-background-image: url("img/cute-cartoon-snail-isolated-white-background-vector-74738243.jpg");
-
-background-size: 15%;
+background-image: url("img/garden\ fence\ landscape\ background\ template_1033672.jpg");
+    background-size: 302%;
+    background-position: 10% 9%;
 background-repeat: no-repeat;
-background-position: bottom;
-border: 2px solid forestgreen;
+
+
 border-radius: 30px;
 }
 .maintemperature {
@@ -126,11 +126,11 @@ padding-left: 24px;
     }
 
     #styleWind{
-      padding-left: 50px;
+      padding-left: 62px;
     }
 .weather-forecast-date {
  
-  color: #a2c11c;
+  color: yellow;
   font-size: 16px;
   font-style: normal;
   
@@ -147,6 +147,9 @@ padding-left: 24px;
   width: 50%;
   padding-left: 46px;
   font-style: italic;
+      color: lavenderblush;
+      font-weight: bold;
+      font-size: 14px;
 }
 
 .col-2 {
@@ -154,9 +157,10 @@ padding-left: 24px;
   width: 20%;}
 
   .weather-forecast {
-    color: black;
+    color: darkgreen;
     text-align: center;
     font-size: 11px;
+    font-weight: bold;
     margin-bottom: 20px;
   }
 
