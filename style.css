@@ -128,6 +128,7 @@ padding-left: 15px;
   background: #a2c11c;
   color: white;
   font-style: italic;
+
   text-align: center;
   margin: auto;
 }
@@ -144,6 +145,12 @@ padding-left: 15px;
 
 .col-2 {
   flex: 0 0 auto;
-  width: 21%;}
-  
+  width: 20%;}
+
+  .weather-forecast {
+    color: black;
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
 
