@@ -60,10 +60,10 @@ border-radius: 30px;
   color: black;
 }
 
-.row.temperature{
+.weather-forecast{
   color: black;
   text-align: center;
-  font-size: 10px;
+  font-size: 13px;
   margin-bottom: 20px;
 }
 
@@ -118,7 +118,7 @@ border-radius: 30px;
     #opensourceLink{
       display: contents;
     }
-.weekday {
+.weather-forecast-date {
   border: 1px solid #a2c11c;
   background: #a2c11c;
   color: white;
@@ -129,5 +129,11 @@ border-radius: 30px;
 
 .wheatericons {
   max-width: 110%;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+  padding-left: 46px;
 }
 
