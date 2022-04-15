@@ -118,6 +118,11 @@ border-radius: 30px;
     #opensourceLink{
       display: contents;
     }
+
+  #styleFeelslike{
+padding-left: 15px;
+
+    }
 .weather-forecast-date {
   border: 1px solid #a2c11c;
   background: #a2c11c;
@@ -136,4 +141,9 @@ border-radius: 30px;
   width: 50%;
   padding-left: 46px;
 }
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 21%;}
+  
 

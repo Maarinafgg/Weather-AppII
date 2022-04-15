@@ -19,6 +19,34 @@ let weekDays = ["Sunday",
   }
   date.innerHTML = `${day} ${hours}:${minutes}`;
 
+  function displayForecast(){
+      let forecastElement = document.querySelector("#forecast");
+
+let forecastHTML = `<div class="row">`;
+forecastHTML = forecastHTML + `
+            <div class="col-2">
+              <div class="weather-forecast-date"> Fri </div> <img
+            class="wheatericons"
+            src="img/1530369_cloudy_weather_clouds_cloud.png"
+            alt=""
+          /> <div class="weather-forecast-temperatures"><span class="maxTemperature">18°</span>/<span class="minTemperature"> 12°</span></div>
+            </div>
+            </div>`;
+
+            forecastHTML = forecastHTML + `
+            <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date"> Fri </div> <img
+            class="wheatericons"
+            src="img/1530369_cloudy_weather_clouds_cloud.png"
+            alt=""
+          /> <div class="weather-forecast-temperatures"><span class="maxTemperature">18°</span>/<span class="minTemperature"> 12°</span></div>
+            </div>
+                    </div>`;
+            forecastHTML = forecastHTML +`</div>`;
+        forecastElement.innerHTML = forecastHTML;
+  }
+
   function getForcast(coordinates){
       console.log(coordinates);
       let apiKey = "9078bdda44af2b0743ddeae89e1d419b";
@@ -96,9 +124,12 @@ let currentLocation = document.querySelector("#currentlocation");
 currentLocation.addEventListener("click",getCurrentLocation);
 searchLocation("Sydney");
 
+
 let fahrenheitLink = document.querySelector ("#fahrenheit-temp");
 fahrenheitLink.addEventListener("click", convertFahrenheit);
 
 
 let celsiusLink = document.querySelector ("#celsius-temp");
 celsiusLink.addEventListener("click", convertCelsius);
+
+displayForecast()
